@@ -144,6 +144,23 @@ function sendTransaction(isAdding) {
   });
 }
 
+//Delete
+function clear() {
+  fetch("/api/transaction", {
+    method: "DELETE"
+  })
+    .then(function(response) {
+      if (response.status !== 200) {
+         console.log ("status code: " + response.status);
+        return;
+      }
+      clearTable();
+    })
+    .catch(function(err) {
+      console.log("Fetch Error :-S", err);
+    });
+}
+
 document.querySelector("#add-btn").onclick = function() {
   sendTransaction(true);
 };
