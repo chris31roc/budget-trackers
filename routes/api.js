@@ -31,7 +31,7 @@ router.get("/api/transaction", (req, res) => {
     });
 });
 
-//delete
+//Delete
 router.delete("/api/transaction", (req, res) => {
   Transaction.remove({})
     .then(response => {
