@@ -161,6 +161,11 @@ function clear() {
     });
 }
 
+function clearTable() {
+  let tbody = document.querySelector("#tbody");
+  tbody.empty();
+}
+
 document.querySelector("#add-btn").onclick = function() {
   sendTransaction(true);
 };
