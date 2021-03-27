@@ -30,3 +30,7 @@ app.use(require("./routes/api.js"));
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
+
+// Line 6 is the reason why I couldn't deploy to heroku properly
+// I needed to set const PORT variable to process.env.PORT and not const PORT = 3000
+// That felt good to figure out! HAPPY CODING!
